@@ -1,0 +1,19 @@
+primero recolectaré los links en un JSON
+  Empezaré en el día 0 y tengo para hasta la página 50 usando un patrón:
+
+  https://ricerca.repubblica.it/ricerca/repubblica?query=mafia+nigeriana&fromdate=1980-01-01&todate=2024-01-01&sortby=adate&author=&mode=any%22
+  https://ricerca.repubblica.it/ricerca/repubblica?query=mafia+nigeriana&fromdate=1980-01-01&todate=2024-01-01&sortby=adate&author=&mode=any%22&page=2
+  https://ricerca.repubblica.it/ricerca/repubblica?query=mafia+nigeriana&fromdate=1980-01-01&todate=2024-01-01&sortby=adate&author=&mode=any%22&page=3
+  https://ricerca.repubblica.it/ricerca/repubblica?query=mafia+nigeriana&fromdate=1980-01-01&todate=2024-01-01&sortby=adate&author=&mode=any%22&page=40
+  https://ricerca.repubblica.it/ricerca/repubblica?query=mafia+nigeriana&fromdate=1980-01-01&todate=2024-01-01&sortby=adate&author=&mode=any%22&page=53
+
+luego usaré Selenium para revisar la última noticia de la URL con paginación 50 semejante a esta metadata:
+  24 gennaio 1984, pág. 4 sez.
+usando un objeto que defina los meses en italiano lo convertiré al formato:
+  1984-24-01
+  año - mes - día
+  con Selenium es lo único que aremos extraer la fecha de la metadata de la última noticia
+lo que sigue es usar esa fecha e insertarla en el patrón que obtuvimos al inicio
+
+    https://ricerca.repubblica.it/ricerca/repubblica?query=mafia+nigeriana&fromdate=1984-01-24&todate=2024-01-01&sortby=adate&author=&mode=any%22
+
