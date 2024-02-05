@@ -16,4 +16,3 @@ usando un objeto que defina los meses en italiano lo convertiré al formato:
 lo que sigue es usar esa fecha e insertarla en el patrón que obtuvimos al inicio
 
     https://ricerca.repubblica.it/ricerca/repubblica?query=mafia+nigeriana&fromdate=1984-01-24&todate=2024-01-01&sortby=adate&author=&mode=any%22
-
