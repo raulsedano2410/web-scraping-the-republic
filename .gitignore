@@ -6,3 +6,6 @@
 
 # ignore pycache directory
 __pycache__/
+
+# ignore .csv files
+*.csv
