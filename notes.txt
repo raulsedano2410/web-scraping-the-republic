@@ -1,0 +1,16 @@
+3ra iteracion:
+mafia nigeriana file 1/5
+visited_url = 1591/2
+output = 7961
+
+4ta iteracion:
+mafia nigeriana file 1/5
+visited_url = 2205/2
+output = 11031
+
+
+time of disban:
+4-5 min
+
+total urls in file 1/5:
+1501

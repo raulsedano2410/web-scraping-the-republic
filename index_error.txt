@@ -1,0 +1,23 @@
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[20], line 1
+----> 1 scraper("mafia nigeriana", '2015-07-12', "2024-01-01", "any")
+
+Cell In[10], line 54
+     50 elif total_number_of_pages <= 50:
+     52     the_urls = urls_generator(keyword, date_of_next_period, to_date, modality, total_number_of_pages)
+---> 54     create_csv(keyword, from_date, to_date, the_urls)
+     56     print('*********** All existing urls of the keyword were saved END ***********')
+     57     print('*********** All existing urls of the keyword were saved END ***********')
+
+Cell In[3], line 16
+     13 if os.path.exists(csv_file_path):
+     14   # Si existe, abre el archivo en modo de escritura
+     15   with open(csv_file_path, mode='a', newline='') as file:
+---> 16       writer = csv.DictWriter(file, fieldnames=data[0].keys())
+     18       # Escribe los nuevos datos en el archivo
+     19       for row in data:
+
+IndexError: list index out of range
+
+
