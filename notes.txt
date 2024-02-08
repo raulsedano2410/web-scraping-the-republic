@@ -14,3 +14,8 @@ time of disban:
 
 total urls in file 1/5:
 1501
+
+visited_urls.csv in 2357
+
+output--nº 54458         antes de la migracion
+visited_urls--nº 1485          //

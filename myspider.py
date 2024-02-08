@@ -4,16 +4,19 @@ import scrapy  # Library for web scraping
 
 from bs4 import BeautifulSoup  # HTML parsing
 
+import time
+
+
 # File to store already visited urls
 visited_urls_file = "visited_urls.csv"
 
 # CSV file containing the start URLs to crawl
-start_urls_csv = "mafia_nigeriana_1998-06-27_2024-01-01.csv"
+start_urls_csv = "mafia_nigeriana_2009-02-24_2024-01-01.csv"
 
 
 # Spider class to handle crawling news articles
 class MySpider(scrapy.Spider):
-    name = 'myspider'
+    name = "myspider"
 
     # Method that initiates requests
     def start_requests(self):
@@ -47,7 +50,7 @@ class MySpider(scrapy.Spider):
     def parse(self, response):
 
         # Select all article elements from page
-        articles = response.css('article')
+        articles = response.css("article")
 
         # List to store extracted article data
         article_data = []
@@ -64,10 +67,10 @@ class MySpider(scrapy.Spider):
             title = soup.get_text(separator=" ", strip=True)
 
             # Extract article link
-            link = article.css('h1 a::attr(href)').get()
+            link = article.css("h1 a::attr(href)").get()
 
             # Extract publish date
-            date = article.css('aside a time::text').get()
+            date = article.css("aside a time::text").get()
 
             # Append article data to list
             article_data.append(
@@ -103,3 +106,20 @@ class MySpider(scrapy.Spider):
 
         # Log reason for spider closure
         self.log("Spider cerrado: " + reason)
+
+    # Configuración de los middlewares
+    # Método para manejar errores de respuesta HTTP
+    def process_exception(self, request, exception, spider):
+        if (
+            isinstance(exception, scrapy.http.HttpError)
+            and exception.response.status == 403
+        ):
+            # Loguea el error 403
+            spider.log(f"Recibido error 403 en {request.url}")
+
+            # Espera 6 minutos antes de volver a intentar la solicitud
+            spider.log("Esperando 6 minutos antes de volver a intentar la solicitud...")
+            time.sleep(360)
+            return scrapy.Request(
+                request.url, callback=request.callback, dont_filter=True
+            )
