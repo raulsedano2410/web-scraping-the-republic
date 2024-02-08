@@ -31,4 +31,4 @@ input_file = "data.csv"
 output_file = "sin_duplicados.csv"
 duplicates_file = "duplicados.csv"
 
-remove_duplicate_rows("../output.csv", "../output_clean.csv", "repeat_list.csv")
+remove_duplicate_rows("../output_v1_outdate.csv", "output_v1_clean.csv", "output_repeat_list.csv")

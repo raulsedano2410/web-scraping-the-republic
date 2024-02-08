@@ -7,8 +7,11 @@
 # ignore pycache directory
 __pycache__/
 
+# ignore helpers directory
+helpers/
+
 # ignore .csv files
-*.csv
+# *.csv
 
 # ignore .txt files
 *.txt
