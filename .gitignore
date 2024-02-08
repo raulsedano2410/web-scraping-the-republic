@@ -12,3 +12,6 @@ __pycache__/
 
 # ignore .txt files
 *.txt
+
+# ignore my personal files
+urls_processor_rsm.ipynb
