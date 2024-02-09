@@ -11,7 +11,7 @@ __pycache__/
 helpers/
 
 # ignore .csv files
-# *.csv
+*.csv
 
 # ignore .txt files
 *.txt
