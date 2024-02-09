@@ -8,7 +8,7 @@ import time
 
 
 # File to store already visited urls
-visited_urls_file = "visited_urls.csv"
+visited_urls_file = "visited_urls_3_5.csv"
 
 # CSV file containing the start URLs to crawl
 start_urls_csv = "mafia_nigeriana_2009-02-24_2024-01-01.csv"
