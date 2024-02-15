@@ -1,0 +1,4 @@
+Total files: 79217
+Rows in original file: 94014
+Rows with pattern: 79217
+Rows without pattern: 14797

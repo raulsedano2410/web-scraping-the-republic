@@ -11,10 +11,10 @@ __pycache__/
 helpers/
 
 # ignore .csv files
-*.csv
+# *.csv
 
 # ignore .txt files
-*.txt
+# *.txt
 
 # ignore my personal files
 urls_processor_rsm.ipynb
